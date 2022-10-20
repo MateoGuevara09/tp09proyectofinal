@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\46224204\\Desktop\\github tp9\\tp09proyectofinal\\tp09proyectofinal.csproj": {}
+    "Z:\\2022\\Programación\\tp09proyectofinal\\tp09proyectofinal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\46224204\\Desktop\\github tp9\\tp09proyectofinal\\tp09proyectofinal.csproj": {
+    "Z:\\2022\\Programación\\tp09proyectofinal\\tp09proyectofinal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\46224204\\Desktop\\github tp9\\tp09proyectofinal\\tp09proyectofinal.csproj",
+        "projectUniqueName": "Z:\\2022\\Programación\\tp09proyectofinal\\tp09proyectofinal.csproj",
         "projectName": "tp09proyectofinal",
-        "projectPath": "C:\\Users\\46224204\\Desktop\\github tp9\\tp09proyectofinal\\tp09proyectofinal.csproj",
-        "packagesPath": "C:\\Users\\46224204\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\46224204\\Desktop\\github tp9\\tp09proyectofinal\\obj\\",
+        "projectPath": "Z:\\2022\\Programación\\tp09proyectofinal\\tp09proyectofinal.csproj",
+        "packagesPath": "C:\\Users\\47165921\\.nuget\\packages\\",
+        "outputPath": "Z:\\2022\\Programación\\tp09proyectofinal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\46224204\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\47165921\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -50,7 +50,7 @@
             },
             "System.Data.SqlClient": {
               "target": "Package",
-              "version": "[4.8.3, )"
+              "version": "[4.8.4, )"
             }
           },
           "imports": [
