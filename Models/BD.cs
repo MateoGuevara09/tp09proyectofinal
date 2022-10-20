@@ -11,12 +11,5 @@ public static class BD{
     private static string _conectionString = @"Server=A-PHZ2-CIDI-048;DataBase=TP09 REPOSITORY; Trusted_Connection=true;";
     
     private static usuario UsuarioEnBD;
-    public static bool CheckearUsuario(string mail,string Contraseña){
-        using(SqlConnection db = new SqlConnection(_conectionString)){
-            string sql ="SELECT * FROM Usuario WHERE mail = @pmail AND Contraseña = @pContraseña";
-            UsuarioEnBD = db.Query<usuario>(sql,new{pmail = mail, pContraseña = Contraseña});
-            //Arreglar
-        }
-        return listaSeries;
-    }
+
 }
