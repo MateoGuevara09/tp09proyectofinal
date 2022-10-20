@@ -1,9 +1,9 @@
 namespace tp09proyectofinal.Models;
 
-public class usuario{
+public class Usuario{
     private int _idUsuario;private string _Nombre;private string _Mail;private string _Contraseña;
-    public usuario(){}
-    public usuario(int pidUsuario,string pNombre,string pMail, string pContraseña){
+    public Usuario(){}
+    public Usuario(int pidUsuario,string pNombre,string pMail, string pContraseña){
         _idUsuario=pidUsuario; 
         _Nombre=pNombre; 
         _Mail=pMail; 
