@@ -33,6 +33,29 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult IniciarSesion(string mail, string contraseña) //DEVOLVER ERROR SI ESTA MAL
+    {
+        BD.IniciarSesion(mail, contraseña);
+        return View("HomePage");
+    }
+    
+    public IActionResult CrearNuevaCuenta(string email, string nombre, string contraseña1, string contraseña2)
+    {
+        Usuario user = null;
+        user.mail=email; //FIJARSE SI ESTA BIEN
+        user.Nombre=nombre;
+        if(contraseña1==contraseña2)
+        {
+            user.Contraseña=contraseña1;
+            BD.CrearNuevoUsuario(user);
+            return View("Index");
+        }
+        else
+        {
+            return View("CrearCuenta"); //CAMBIAR A QUE TIRE ERROR
+        }
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
