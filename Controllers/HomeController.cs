@@ -5,7 +5,7 @@ using tp09proyectofinal.Models;
 namespace tp09proyectofinal.Controllers;
 
 public class HomeController : Controller
-{
+{   
     private readonly ILogger<HomeController> _logger;
 
     public HomeController(ILogger<HomeController> logger)
@@ -19,6 +19,16 @@ public class HomeController : Controller
     }
 
     public IActionResult Privacy()
+    {
+        return View();
+    }
+
+    public IActionResult CrearCuenta()
+    {
+        return View();
+    }
+
+    public IActionResult HomePage()
     {
         return View();
     }
