@@ -482,31 +482,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\47165921\\.nuget\\packages\\": {},
+    "C:\\Users\\46224204\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "Z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\tp09proyectofinal.csproj",
       "projectName": "tp09proyectofinal",
       "projectPath": "Z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\tp09proyectofinal.csproj",
       "packagesPath": "C:\\Users\\46224204\\.nuget\\packages\\",
       "outputPath": "Z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\obj\\",
-=======
-      "projectUniqueName": "Z:\\2022\\Programación\\tp09proyectofinal\\tp09proyectofinal.csproj",
-      "projectName": "tp09proyectofinal",
-      "projectPath": "Z:\\2022\\Programación\\tp09proyectofinal\\tp09proyectofinal.csproj",
-      "packagesPath": "C:\\Users\\47165921\\.nuget\\packages\\",
-      "outputPath": "Z:\\2022\\Programación\\tp09proyectofinal\\obj\\",
->>>>>>> a6b7d79280dff70fba25fc6c4f7f678cacb41617
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\47165921\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\46224204\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -563,5 +555,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché Z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
