@@ -67,7 +67,7 @@ public class HomeController : Controller
         }
     }
 
-    public IActionResult CargarFotoPerfil(IFormFile myFile){
+    public IActionResult CargarFotoPerfil(Usuario user, IFormFile myFile){
         if(myFile.Length>0)
         {
             string wwwRootLocal = this.Enviroment.ContentRootPath + @"wwwroot\" + myFile.FileName;
@@ -75,7 +75,7 @@ public class HomeController : Controller
             {
                 myFile.CopyTo(stream);
             }
-            Usuario.Foto=myFile.FileName;
+            User.Foto=myFile.FileName;
         }
         BD.CargarFoto(myFile.FileName);
         return View("Perfil");
