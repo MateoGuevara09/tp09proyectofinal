@@ -66,3 +66,14 @@ Z:\2022\Programación\tp09proyectofinal\obj\Debug\net6.0\refint\tp09proyectofina
 Z:\2022\Programación\tp09proyectofinal\obj\Debug\net6.0\tp09proyectofinal.pdb
 Z:\2022\Programación\tp09proyectofinal\obj\Debug\net6.0\tp09proyectofinal.genruntimeconfig.cache
 Z:\2022\Programación\tp09proyectofinal\obj\Debug\net6.0\ref\tp09proyectofinal.dll
+C:\Users\47165921\Desktop\tp09\tp09proyectofinal\obj\Debug\net6.0\tp09proyectofinal.csproj.AssemblyReference.cache
+C:\Users\47165921\Desktop\tp09\tp09proyectofinal\obj\Debug\net6.0\tp09proyectofinal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\47165921\Desktop\tp09\tp09proyectofinal\obj\Debug\net6.0\tp09proyectofinal.AssemblyInfoInputs.cache
+C:\Users\47165921\Desktop\tp09\tp09proyectofinal\obj\Debug\net6.0\tp09proyectofinal.AssemblyInfo.cs
+C:\Users\47165921\Desktop\tp09\tp09proyectofinal\obj\Debug\net6.0\tp09proyectofinal.csproj.CoreCompileInputs.cache
+C:\Users\47165921\Desktop\tp09\tp09proyectofinal\obj\Debug\net6.0\tp09proyectofinal.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\47165921\Desktop\tp09\tp09proyectofinal\obj\Debug\net6.0\tp09proyectofinal.RazorAssemblyInfo.cache
+C:\Users\47165921\Desktop\tp09\tp09proyectofinal\obj\Debug\net6.0\tp09proyectofinal.RazorAssemblyInfo.cs
+C:\Users\47165921\Desktop\tp09\tp09proyectofinal\obj\Debug\net6.0\tp09proyectofinal.dll
+C:\Users\47165921\Desktop\tp09\tp09proyectofinal\obj\Debug\net6.0\refint\tp09proyectofinal.dll
+C:\Users\47165921\Desktop\tp09\tp09proyectofinal\obj\Debug\net6.0\tp09proyectofinal.pdb

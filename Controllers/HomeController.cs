@@ -1,6 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using tp09proyectofinal.Models;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
 namespace tp09proyectofinal.Controllers;
 
