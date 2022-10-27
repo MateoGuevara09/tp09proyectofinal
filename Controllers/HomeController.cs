@@ -33,7 +33,7 @@ public class HomeController : Controller
         return View();
     }
 
-     public IActionResult Perfil()
+    public IActionResult Perfil()
     {
         return View();
     }
