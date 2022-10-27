@@ -23,4 +23,16 @@ body {
 .divlistaarchivos{
   background-color: #B9B9B9;
   height:400px ;
+  float: left;
+}
+.navbarr{
+  margin-top: 10px;
+}
+.perfil{
+  height: 60px;
+  width: 60px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+  background-size: 100% 100%;
 }
