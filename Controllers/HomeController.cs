@@ -65,6 +65,20 @@ public class HomeController : Controller
         }
     }
 
+    public IActionResult CargarFotoPerfil(IFormFile myFile){
+        if(myFile.Length>0)
+        {
+            string wwwRootLocal = this.Enviroment.ContentRootPath + @"wwwroot\" + myFile.FileName;
+            using (var stream = System.IO.File.Create(wwwRootLocal))
+            {
+                myFile.CopyTo(stream);
+            }
+            Usuario.Foto=myFile.FileName;
+        }
+        BD.CargarFoto(myFile.FileName);
+        return View("Perfil");
+    }
+    
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
