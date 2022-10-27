@@ -24,6 +24,14 @@ public static class BD{
             db.Execute(sql,new {pNombre = user.Nombre, pMail = user.mail, pContraseña = user.Contraseña});
         }
     }
+
+    public static void CargarFoto (string foto){
+        string sql = "INSERT INTO Usuario (Foto) VALUES (@pfoto)";
+        using(SqlConnection db = new SqlConnection(_conectionString)){
+            db.Execute(sql,new {pfoto = foto});
+        }
+    }
+
     public static void NuevoDocumento (Documento doc){
         string sql = "INSERT INTO Documento (NombreDoc, idUsuario, idCarpeta) VALUES (@pNombreDoc,@pidUsuario,@pidCarpeta)";
         using(SqlConnection db = new SqlConnection(_conectionString)){

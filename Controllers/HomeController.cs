@@ -33,9 +33,18 @@ public class HomeController : Controller
         return View();
     }
 
+     public IActionResult Perfil()
+    {
+        return View();
+    }
+
     public IActionResult IniciarSesion(string mail, string contraseña) //DEVOLVER ERROR SI ESTA MAL
     {
-        BD.IniciarSesion(mail, contraseña);
+        Usuario user = BD.IniciarSesion(mail, contraseña);
+        while (user==null)
+        {
+            return View("Index");
+        }
         return View("HomePage");
     }
     
