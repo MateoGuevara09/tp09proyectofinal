@@ -46,7 +46,7 @@ public class HomeController : Controller
     {
         if (BD.IniciarSesion(mail, contraseña))
         {
-            return View("HomePage");    
+            return RedirectToAction("ObtenerCarpetas");  
         }else{
             ViewBag.Error = "Error al iniciar sesion";
             return View("Index");
@@ -67,8 +67,27 @@ public class HomeController : Controller
             return View("CrearCuenta"); 
         }
     }
-
     
+    public IActionResult ObtenerCarpetas()
+    {
+        ViewBag.ListaCarpetas=BD.ObtenerCarpetas();
+        return View("HomePage");
+    }
+/*
+    public IActionResult CargarFotoPerfil(Usuario user, IFormFile myFile){
+        if(myFile.Length>0)
+        {
+            string wwwRootLocal = this.Enviroment.ContentRootPath + @"wwwroot\" + myFile.FileName;
+            using (var stream = System.IO.File.Create(wwwRootLocal))
+            {
+                myFile.CopyTo(stream);
+            }
+            User.Foto=myFile.FileName;
+        }
+        BD.CargarFoto(myFile.FileName);
+        return View("Perfil");
+    }
+    */
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

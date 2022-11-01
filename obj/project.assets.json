@@ -488,11 +488,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "Z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\tp09proyectofinal.csproj",
       "projectName": "tp09proyectofinal",
       "projectPath": "Z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\tp09proyectofinal.csproj",
       "packagesPath": "C:\\Users\\46224204\\.nuget\\packages\\",
       "outputPath": "Z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\obj\\",
+=======
+      "projectUniqueName": "Z:\\2022\\Programación\\tp09proyectofinal\\tp09proyectofinal.csproj",
+      "projectName": "tp09proyectofinal",
+      "projectPath": "Z:\\2022\\Programación\\tp09proyectofinal\\tp09proyectofinal.csproj",
+      "packagesPath": "C:\\Users\\47165921\\.nuget\\packages\\",
+      "outputPath": "Z:\\2022\\Programación\\tp09proyectofinal\\obj\\",
+>>>>>>> 37724b0ed77f2b1ccd9147fbd36b0ef8ab8746fc
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

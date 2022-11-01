@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "aUMpmvdpmErCcGmBBNyuXsdnswEGJqMDmddmJQfMfbDYDnG+6PWDiTPi5FuoB7OeJWwFiCWU8m/wRU5yYOvA4A==",
   "success": true,
   "projectFilePath": "Z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\tp09proyectofinal.csproj",
+=======
+  "dgSpecHash": "HV6TKwaei6r9Svxl3OKA4w3LMcBLa3/bYmbOievohWr2p/TNMX+fwWIboTQ2T64CAxEa7weMN8btntiZ3XDGpg==",
+  "success": true,
+  "projectFilePath": "Z:\\2022\\Programación\\tp09proyectofinal\\tp09proyectofinal.csproj",
+>>>>>>> 37724b0ed77f2b1ccd9147fbd36b0ef8ab8746fc
   "expectedPackageFiles": [
     "C:\\Users\\46224204\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\46224204\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
