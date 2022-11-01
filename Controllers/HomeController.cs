@@ -47,7 +47,7 @@ public class HomeController : Controller
         {
             return View("Index");
         }
-        return View("HomePage");
+        return RedirectToAction("ObtenerCarpetas");
     }
     
     public IActionResult CrearNuevaCuenta(string email, string nombre, string contraseña1, string contraseña2)
@@ -66,7 +66,13 @@ public class HomeController : Controller
             return View("CrearCuenta"); //CAMBIAR A QUE TIRE ERROR
         }
     }
-
+    
+    public IActionResult ObtenerCarpetas()
+    {
+        ViewBag.ListaCarpetas=BD.ObtenerCarpetas();
+        return View("HomePage");
+    }
+/*
     public IActionResult CargarFotoPerfil(Usuario user, IFormFile myFile){
         if(myFile.Length>0)
         {
@@ -80,7 +86,7 @@ public class HomeController : Controller
         BD.CargarFoto(myFile.FileName);
         return View("Perfil");
     }
-    
+    */
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

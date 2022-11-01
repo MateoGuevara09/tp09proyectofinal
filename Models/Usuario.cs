@@ -27,12 +27,8 @@ public class Usuario{
         get{return _Contraseña;}
         set {_Contraseña = value;}
     }
-<<<<<<< HEAD
-
-=======
     public string Foto{
         get{return _foto;}
         set {_foto = value;}
     }
->>>>>>> 0778c1c459935d124a3295479c4ae4025cd288b4
 }
