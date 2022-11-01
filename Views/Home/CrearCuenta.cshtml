@@ -7,10 +7,10 @@
 
 <div class=" divsesion"> @* text-center *@
     <div class="p-4 d-flex justify-content-center pb-4">
-      <form style="width: 22rem;">
+      <form style="width: 22rem;"  action='@Url.Action("CrearNuevaCuenta","Home")' method="post">
         <!-- Email input -->
         <div class="form-outline mb-4">
-          <input type="email" id="form2Example1" class="form-control" name="email">
+          <input type="email" id="form2Example1" class="form-control" name="mail">
           <label class="form-label" for="form2Example1" style="margin-left: 0px;">Email</label>
         <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 88.8px;"></div><div class="form-notch-trailing"></div></div></div>
 
@@ -22,7 +22,7 @@
 
         <!-- Password input -->
         <div class="form-outline mb-4">
-          <input type="password" id="form2Example2" class="form-control" name="contraseña1">
+          <input type="password" id="form2Example2" class="form-control" name="contraseña">
           <label class="form-label" for="form2Example2" style="margin-left: 0px;">Contraseña</label>
         <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 64.8px;"></div><div class="form-notch-trailing"></div></div></div>
 
@@ -44,6 +44,11 @@
         <!-- Register buttons -->
         <div class="text-center">
           <p>Ya tenes cuenta? <a href='@Url.Action("Index","home")'>Iniciar sesion</a></p>
+          @{
+             if(ViewBag.Error != null){
+              <p class="text-danger">@ViewBag.Error</p>
+             }
+          }
         </div>
       </form>
     </div>

@@ -17,6 +17,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        ViewBag.Error = null;
         return View();
     }
 
@@ -27,6 +28,7 @@ public class HomeController : Controller
 
     public IActionResult CrearCuenta()
     {
+        ViewBag.Error = null;
         return View();
     }
 
@@ -42,44 +44,30 @@ public class HomeController : Controller
 
     public IActionResult IniciarSesion(string mail, string contraseña) //DEVOLVER ERROR SI ESTA MAL
     {
-        Usuario user = BD.IniciarSesion(mail, contraseña);
-        while (user==null)
+        if (BD.IniciarSesion(mail, contraseña))
         {
+            return View("HomePage");    
+        }else{
+            ViewBag.Error = "Error al iniciar sesion";
             return View("Index");
         }
-        return View("HomePage");
     }
     
-    public IActionResult CrearNuevaCuenta(string email, string nombre, string contraseña1, string contraseña2)
+    public IActionResult CrearNuevaCuenta(Usuario user)
     {
-        Usuario user = null;
-        user.mail=email; //FIJARSE SI ESTA BIEN
-        user.Nombre=nombre;
-        if(contraseña1==contraseña2)
+
+        if(user.Contraseña==user.Contraseña2)
         {
-            user.Contraseña=contraseña1;
             BD.CrearNuevoUsuario(user);
             return View("Index");
         }
         else
         {
-            return View("CrearCuenta"); //CAMBIAR A QUE TIRE ERROR
+            ViewBag.Error = "Escribio mal la contraseña en alguno de los dos campos";
+            return View("CrearCuenta"); 
         }
     }
 
-    public IActionResult CargarFotoPerfil(Usuario user, IFormFile myFile){
-        if(myFile.Length>0)
-        {
-            string wwwRootLocal = this.Enviroment.ContentRootPath + @"wwwroot\" + myFile.FileName;
-            using (var stream = System.IO.File.Create(wwwRootLocal))
-            {
-                myFile.CopyTo(stream);
-            }
-            User.Foto=myFile.FileName;
-        }
-        BD.CargarFoto(myFile.FileName);
-        return View("Perfil");
-    }
     
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

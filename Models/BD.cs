@@ -8,15 +8,19 @@ namespace tp09proyectofinal.Models;
 public static class BD{
 
     //CAMBIAR LA COMPUTADORA PARA QUE FUNCIONE
-    private static string _conectionString = @"Server=A-PHZ2-CIDI-036;DataBase=TP09 REPOSITORY; Trusted_Connection=true;";
+    private static string _conectionString = @"Server=A-PHZ2-CIDI-040;DataBase=TP09 REPOSITORY; Trusted_Connection=true;";
     
     private static Usuario UsuarioEnBD = new Usuario();
-    public static Usuario IniciarSesion(string mail,string Contraseña){
+    public static bool IniciarSesion(string mail,string Contraseña){
         using(SqlConnection db = new SqlConnection(_conectionString)){
             string sql ="SELECT * FROM Usuario WHERE mail = @pmail AND Contraseña = @pContraseña";
             UsuarioEnBD = db.QueryFirstOrDefault<Usuario>(sql,new{pmail = mail, pContraseña = Contraseña});
         }
-        return UsuarioEnBD; //Si UsuarioEnBD esta null tiene que volver a pedir que inicie sesión, si no, está bien.
+        if (UsuarioEnBD == null){
+            return false;
+        }else{
+            return true;
+        } //Si UsuarioEnBD esta null tiene que volver a pedir que inicie sesión, si no, está bien.
     }
     public static void CrearNuevoUsuario (Usuario user){
         string sql = "INSERT INTO Usuario (Nombre,mail,Contraseña) VALUES (@pNombre,@pMail,@pContraseña)";
