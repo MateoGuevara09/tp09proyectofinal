@@ -36,6 +36,14 @@ public static class BD{
         }
     }
 
+//Fijarse que onda
+    public static void CambiarPerfil (Usuario user){
+        string sql = "UPDATE Usuario SET Nombre= @pNombre, mail=@pMail, Contraseña=@pContraseña WHERE idUsuario=@pidUsuario";
+        using(SqlConnection db = new SqlConnection(_conectionString)){
+            db.Execute(sql,new {pNombre = user.Nombre, pMail = user.mail, pContraseña = user.Contraseña, pidUsuario = user.idUsuario});
+        }
+    }
+
     public static void NuevoDocumento (Documento doc){
         string sql = "INSERT INTO Documento (NombreDoc, idUsuario, idCarpeta) VALUES (@pNombreDoc,@pidUsuario,@pidCarpeta)";
         using(SqlConnection db = new SqlConnection(_conectionString)){

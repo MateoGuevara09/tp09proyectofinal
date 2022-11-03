@@ -8,11 +8,11 @@ namespace tp09proyectofinal.Controllers;
 
 public class HomeController : Controller
 {   
-    private readonly ILogger<HomeController> _logger;
+        private IWebHostEnvironment Enviroment;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(IWebHostEnvironment eviroment)
     {
-        _logger = logger;
+        Enviroment=eviroment;
     }
 
     public IActionResult Index()
@@ -51,8 +51,16 @@ public class HomeController : Controller
             ViewBag.Error = "Error al iniciar sesion";
             return View("Index");
         }
+        //ViewBag.usuario=user;
+        return RedirectToAction("ObtenerCarpetas");
     }
-    
+
+/*                  ARREGLAR 
+    public IActionResult ActualizarPerfil(Usuario user){
+        CambiarPerfil(user);
+        return View ("HomePage");
+    }
+*/
     public IActionResult CrearNuevaCuenta(Usuario user)
     {
 
@@ -73,21 +81,22 @@ public class HomeController : Controller
         ViewBag.ListaCarpetas=BD.ObtenerCarpetas();
         return View("HomePage");
     }
-/*
-    public IActionResult CargarFotoPerfil(Usuario user, IFormFile myFile){
-        if(myFile.Length>0)
+
+    [HttpPost]
+    public IActionResult CargarFotoPerfil(Usuario user, IFormFile MyFile){
+        if(MyFile.Length>0)
         {
-            string wwwRootLocal = this.Enviroment.ContentRootPath + @"wwwroot\" + myFile.FileName;
+            string wwwRootLocal = this.Enviroment.ContentRootPath + @"wwwroot\" + MyFile.FileName;
             using (var stream = System.IO.File.Create(wwwRootLocal))
             {
-                myFile.CopyTo(stream);
+                MyFile.CopyTo(stream);
             }
-            User.Foto=myFile.FileName;
+            user.Foto=MyFile.FileName;
         }
-        BD.CargarFoto(myFile.FileName);
+        BD.CargarFoto(MyFile.FileName);
         return View("Perfil");
     }
-    */
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

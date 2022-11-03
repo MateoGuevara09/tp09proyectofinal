@@ -1,0 +1,33 @@
+@{
+    ViewData["Title"] = "Mi perfil";
+}
+
+<!-- Foto De Perfil -->
+</div>
+<div class="perfil" style="background-image: url(https://s1.eestatic.com/2020/05/18/como/gatos-mascotas-trucos_490961518_152142875_1706x960.jpg);width:60px"></div>
+  <div class="nombre"> <h1>Nombre: @ViewBag.usuario.nombre</h1> </div>
+  <div class="mail"> <h1>mail: @ViewBag.usuario.mail</h1> </div>
+<form style="width: 22rem;" action='@Url.Action("ActualizarPerfil","Home")' method="post">    
+    <!-- Cambiar nombre de usuario -->
+    <div class="form-outline mb-4">
+      <input type="text" id="form2Example1" class="form-control" name="nombre">
+      <label class="form-label" for="form2Example1" style="margin-left: 0px;">Cambiar nombre de usuario</label>
+    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 88.8px;"></div><div class="form-notch-trailing"></div></div></div>
+
+    <!-- Cambiar mail -->
+    <div class="form-outline mb-4">
+      <input type="email" id="form2Example1" class="form-control" name="email">
+      <label class="form-label" for="form2Example1" style="margin-left: 0px;">Cambiar mail</label>
+    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 88.8px;"></div><div class="form-notch-trailing"></div></div></div>
+
+    <!-- Cambiar contraseña -->
+    <div class="form-outline mb-4">
+      <input type="password" id="form2Example2" class="form-control" name="contraseña1">
+      <label class="form-label" for="form2Example2" style="margin-left: 0px;">Cambiar contraseña</label>
+    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 64.8px;"></div><div class="form-notch-trailing"></div></div></div>
+
+</form>
+<!-- Form Subir Foto -->
+<form action='@Url.Action("CargarFotoPerfil","Home")' method="POST" enctype="multipart/form-data">
+<input type="file" name="MyFile">
+</form>
