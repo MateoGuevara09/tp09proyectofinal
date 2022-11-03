@@ -30,7 +30,13 @@
         <!-- Register buttons -->
         <div class="text-center">
           <p>No tenes cuenta? <a href='@Url.Action("CrearCuenta","home")'>Crear cuenta</a></p>
-          <a href='@Url.Action("HomePage","home")'>Pagina Principal</a>
+          <br>
+          @{
+             if(ViewBag.Error != null){
+              <p class="text-danger">@ViewBag.Error</p>
+             }
+          }
+          <p></p>
         </div>
       </form>
     </div>
