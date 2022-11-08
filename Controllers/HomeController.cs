@@ -53,14 +53,11 @@ public class HomeController : Controller
         return RedirectToAction("ObtenerCarpetas");
     }
 
-/*                  ARREGLAR 
-*/
+//          HACER QUE SI ALGUNA COSA ES NULL NO LA ACTUALICE 
     public IActionResult ActualizarPerfil(Usuario user){
         BD.CambiarPerfil(user);
-        Usuario user2 = BD.ObtenerUsuario(user.mail, user.Contraseña);
-        BD.UsuarioLogueado = user2;
-        return View ("Perfil");
-
+        BD.UsuarioLogueado = user;
+        return RedirectToAction("ObtenerCarpetas");
     }
     public IActionResult CrearNuevaCuenta(Usuario user)
     {

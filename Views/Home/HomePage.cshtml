@@ -33,9 +33,11 @@
     <input type="submit" value="Buscar">
   </p>
 </form>
+  <h4 style="text-decoration: underline;">⭐ Bienvenido @BD.UsuarioLogueado.Nombre ⭐</h4>
+  <a href='@Url.Action("Index","Home")' class="btn btn-secondary btn-lg btn-block active">Cerrar Sesión</a>
 </div>
-<!-- Boton perfil -->
-<a href='@Url.Action("Perfil","Home")' class="perfil" style="background-image: url(https://s1.eestatic.com/2020/05/18/como/gatos-mascotas-trucos_490961518_152142875_1706x960.jpg);width:90px"></a>
+  <!-- Boton perfil -->
+  <a href='@Url.Action("Perfil","Home")' style="background-image: url(@BD.UsuarioLogueado.Foto);width:90px"></a>
 
 <!-- Boton cerrar sesión -->
 
