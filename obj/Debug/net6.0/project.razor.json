@@ -16296,57 +16296,6 @@
     "CSharpLanguageVersion": 1000
   },
   "RootNamespace": "tp09proyectofinal",
-  "Documents": [
-    {
-      "FilePath": "z:\\2022\\Programación\\tp09proyectofinal\\Views\\Home\\CrearCuenta.cshtml",
-      "TargetPath": "Views\\Home\\CrearCuenta.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "z:\\2022\\Programación\\tp09proyectofinal\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "z:\\2022\\Programación\\tp09proyectofinal\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "z:\\2022\\Programación\\tp09proyectofinal\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "z:\\2022\\Programación\\tp09proyectofinal\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "z:\\2022\\Programación\\tp09proyectofinal\\Views\\Home\\HomePage.cshtml",
-      "TargetPath": "Views\\Home\\HomePage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "z:\\2022\\Programación\\tp09proyectofinal\\Views\\Home\\Perfil.cshtml",
-      "TargetPath": "Views\\Home\\Perfil.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "z:\\2022\\Programación\\tp09proyectofinal\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "z:\\2022\\Programación\\tp09proyectofinal\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "z:\\2022\\Programación\\tp09proyectofinal\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    }
-  ],
+  "Documents": [],
   "SerializationFormat": "0.2"
 }

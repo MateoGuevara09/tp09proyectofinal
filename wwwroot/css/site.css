@@ -22,12 +22,8 @@ body {
   margin-top: 50%;
 }
 .divlistaarchivos{
-  background-color: #B9B9B9;
   float: left;
   text-align: center;
-}
-.divarchivos{
-  background-color: #C4C4C4;
 }
 
 .navbarr{
