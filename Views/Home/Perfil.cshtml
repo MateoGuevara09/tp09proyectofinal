@@ -11,7 +11,7 @@
       <div class="mail"> <h4>Correo Electrónico: @BD.UsuarioLogueado.mail</h4></div>
     </div>
     <div class="col-md">  
-      <form style="width: 22rem;" action='@Url.Action("ActualizarPerfil","Home")' method="post">    
+      <form style="width: 22rem;" action='@Url.Action("ActualizarPerfil","Home")' method="post" enctype="multipart/form-data">    
           <!-- Cambiar nombre de usuario -->
           <div class="form-outline mb-4">
             <label class="form-label" for="form2Example1" style="margin-left: 0px;">Cambiar nombre de usuario</label>
@@ -29,16 +29,16 @@
             <label class="form-label" for="form2Example2" style="margin-left: 0px;">Cambiar contraseña</label>
             <input type="password" id="form2Example2" class="form-control" name="contraseña1">
           <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 64.8px;"></div><div class="form-notch-trailing"></div></div></div>
-        <button type="submit" class="btn btn-primary btn-block mb-4">Realizar cambios</button>
-      </form>
-
-      <!-- Form Subir Foto -->
-      <label class="form-label" for="form2Example2" style="margin-left: 0px;">Cambiar foto de perfil</label>
-      <form action='@Url.Action("CargarFotoPerfil","Home")' method="POST" enctype="multipart/form-data">
-        <input style="margin-bottom: 3%;" type="file" name="MyFile">
+        
+        <label class="form-label" for="form2Example2" style="margin-left: 0px;">Cambiar foto de perfil</label>
+        <input style="margin-bottom: 5%;" type="file" name="MyFile">
         <br>
         <button type="submit" class="btn btn-primary btn-block mb-4">Realizar cambios</button>
       </form>
+
+      <!-- Form Subir Foto <form action='@Url.Action("CargarFotoPerfil","Home")' method="POST" enctype="multipart/form-data">
+      </form>-->
+      
     </div>
 
   </div>
