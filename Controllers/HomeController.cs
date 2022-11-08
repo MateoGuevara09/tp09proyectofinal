@@ -61,7 +61,7 @@ public class HomeController : Controller
     public IActionResult ActualizarPerfil(Usuario user){
         BD.CambiarPerfil(user);
         BD.UsuarioLogueado = user;
-        return View ("Perfil");
+        return RedirectToAction("ObtenerCarpetas");
     }
     public IActionResult CrearNuevaCuenta(Usuario user)
     {
