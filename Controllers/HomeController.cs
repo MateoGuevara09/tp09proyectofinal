@@ -32,10 +32,6 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult HomePage()
-    {
-        return View();
-    }
 
     public IActionResult Perfil()
     {
@@ -49,7 +45,7 @@ public class HomeController : Controller
         {
             Usuario user = BD.ObtenerUsuario(mail, contraseña);
             BD.UsuarioLogueado = user;
-            return RedirectToAction("ObtenerCarpetas");  
+            return RedirectToAction("HomePage");  
         }else{
             ViewBag.Error = "Error al iniciar sesion";
             return View("Index");
@@ -81,17 +77,19 @@ public class HomeController : Controller
         }
     }
     
-    public IActionResult ObtenerCarpetas()
+    public IActionResult HomePage()
     {
         ViewBag.ListaCarpetas=BD.ObtenerCarpetas();
+        ViewBag.Usuario = BD.UsuarioLogueado;
         return View("HomePage");
     }
+
 
     [HttpPost]
     public IActionResult CargarFotoPerfil(Usuario user, IFormFile MyFile){
         if(MyFile.Length>0)
         {
-            string wwwRootLocal = this.Enviroment.ContentRootPath + @"wwwroot\" + MyFile.FileName;
+            string wwwRootLocal = this.Enviroment.ContentRootPath + @"\wwwroot\" + MyFile.FileName;
             using (var stream = System.IO.File.Create(wwwRootLocal))
             {
                 MyFile.CopyTo(stream);
@@ -101,6 +99,19 @@ public class HomeController : Controller
         BD.CargarFoto(MyFile.FileName);
         return View("Perfil");
     }
+    [HttpPost]
+    public IActionResult SubirArchivo( IFormFile MyFile){
+        /*input type file solo te deja subir archivos por lo que en vez de subir tambien carpetas te deberia dejar crear una carpeta donde puedas guardar las distintas cosas*/
+        /*Subir el nombre del archivo a la base de datos y en la clase(tiene que pasar el Usuario tambien el form)*/
+        if(MyFile.Length>0){
+            string wwwRootLocal = this.Enviroment.ContentRootPath + @"\wwwroot\" + MyFile.FileName;
+            using (var stream = System.IO.File.Create(wwwRootLocal))
+            {
+                MyFile.CopyTo(stream);
+            }
+        }
+        return View("Index");
+    } 
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
