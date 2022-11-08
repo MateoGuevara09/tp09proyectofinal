@@ -44,23 +44,28 @@ public class HomeController : Controller
 
     public IActionResult IniciarSesion(string mail, string contraseña) //DEVOLVER ERROR SI ESTA MAL
     {
+        
         if (BD.IniciarSesion(mail, contraseña))
         {
+            Usuario user = BD.ObtenerUsuario(mail, contraseña);
+            BD.UsuarioLogueado = user;
             return RedirectToAction("ObtenerCarpetas");  
         }else{
             ViewBag.Error = "Error al iniciar sesion";
             return View("Index");
         }
-        //ViewBag.usuario=user;
         return RedirectToAction("ObtenerCarpetas");
     }
 
 /*                  ARREGLAR 
-    public IActionResult ActualizarPerfil(Usuario user){
-        CambiarPerfil(user);
-        return View ("HomePage");
-    }
 */
+    public IActionResult ActualizarPerfil(Usuario user){
+        BD.CambiarPerfil(user);
+        Usuario user2 = BD.ObtenerUsuario(user.mail, user.Contraseña);
+        BD.UsuarioLogueado = user2;
+        return View ("Perfil");
+
+    }
     public IActionResult CrearNuevaCuenta(Usuario user)
     {
 
