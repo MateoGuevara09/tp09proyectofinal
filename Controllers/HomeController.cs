@@ -51,8 +51,6 @@ public class HomeController : Controller
             ViewBag.Error = "Error al iniciar sesion";
             return View("Index");
         }
-        //ViewBag.usuario=user;
-        return RedirectToAction("ObtenerCarpetas");
     }
 
 /*                  ARREGLAR 
