@@ -45,6 +45,7 @@ public class HomeController : Controller
         {
             Usuario user = BD.ObtenerUsuario(mail, contraseña);
             BD.UsuarioLogueado = user;
+            BD.UsuarioLogueado.Foto="/perfil.png";
             return RedirectToAction("HomePage");  
         }else{
             ViewBag.Error = "Error al iniciar sesion";
@@ -57,7 +58,7 @@ public class HomeController : Controller
     public IActionResult ActualizarPerfil(Usuario user){
         BD.CambiarPerfil(user);
         BD.UsuarioLogueado = user;
-        return RedirectToAction("ObtenerCarpetas");
+        return RedirectToAction("HomePage");
     }
     public IActionResult CrearNuevaCuenta(Usuario user)
     {
