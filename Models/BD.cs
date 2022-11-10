@@ -8,7 +8,11 @@ namespace tp09proyectofinal.Models;
 public static class BD{
 
     //CAMBIAR LA COMPUTADORA PARA QUE FUNCIONE
+<<<<<<< HEAD
     private static string _conectionString = @"Server=A-PHZ2-CIDI-036;DataBase=TP09 REPOSITORY; Trusted_Connection=true;";
+=======
+    private static string _conectionString = @"Server=A-PHZ2-CIDI-035;DataBase=TP09 REPOSITORY; Trusted_Connection=true;";
+>>>>>>> 5e2c39ca48eb77ca20089a2fd21d8aaa923703c5
     public static Usuario UsuarioLogueado = null;
     
     private static Usuario UsuarioEnBD = new Usuario();
@@ -53,9 +57,9 @@ public static class BD{
     }
 
     public static void NuevoDocumento (Documento doc){
-        string sql = "INSERT INTO Documento (NombreDoc, idUsuario, idCarpeta) VALUES (@pNombreDoc,@pidUsuario,@pidCarpeta)";
+        string sql = "INSERT INTO Documento (idUsuario,IdCarpeta,NombreDoc,TipoDoc,TiempoSubida) VALUES (@pidUsuario,@pIdCarpeta,@pNombreDoc,@pTipoDoc,@pTiempoSubida)";
         using(SqlConnection db = new SqlConnection(_conectionString)){
-            db.Execute(sql,new {pNombreDoc = doc.NombreDoc, pidUsuario = doc.IdUsuario, pidCarpeta = doc.IdCarpeta});
+            db.Execute(sql,new {pidUsuario = doc.IdUsuario,pIdCarpeta = doc.IdCarpeta,pNombreDoc = doc.NombreDoc,pTipoDoc = doc.TipoDoc,pTiempoSubida = doc.TiempoSubida});
         }
     }
     public static List<Documento> ObtenerDocumentos(int idCarpeta){

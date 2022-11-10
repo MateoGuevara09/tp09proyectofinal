@@ -3,7 +3,7 @@
 }
 <!-- Lista carpetas con boton que te mande a su contenido -->
 <div class="col-2  divlistaarchivos">
-    <form action='@Url.Action("SubirArchivo","Home")' method="post" enctype="multipart/form-data">
+    <form action='@Url.Action("SubirArchivo","Home", new{IdUsuario = @ViewBag.Usuario.idUsuario})' method="post" enctype="multipart/form-data">
       <label for="SubirArchivo" class="btn btn-secondary btn-lg btn-block active">Nuevo</label>
       <input id="SubirArchivo" type="file" name="MyFile" style="visibility:hidden;" onchange="javascript:this.form.submit();">
     </form> 
