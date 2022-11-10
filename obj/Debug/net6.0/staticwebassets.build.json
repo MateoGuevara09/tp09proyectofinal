@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cbLdcCkuL/DrKD1kr89DUvfx2QpNAaIa0HEjTbimhng=",
+  "Hash": "PunQ/q6vT5h6nvWDY42BeyWkSfxcQmOp1LVG6rRT4TE=",
   "Source": "tp09proyectofinal",
   "BasePath": "_content/tp09proyectofinal",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "Z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\tp09proyectofinal.bundle.scp.css"
+    },
+    {
+      "Identity": "Z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\wwwroot\\5DJB6CMISFDIHICSULLTV6T254.webp",
+      "SourceId": "tp09proyectofinal",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\wwwroot\\",
+      "BasePath": "_content/tp09proyectofinal",
+      "RelativePath": "5DJB6CMISFDIHICSULLTV6T254.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\5DJB6CMISFDIHICSULLTV6T254.webp"
     },
     {
       "Identity": "Z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\wwwroot\\css\\site.css",

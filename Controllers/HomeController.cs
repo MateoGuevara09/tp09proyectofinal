@@ -50,7 +50,7 @@ public class HomeController : Controller
             ViewBag.Error = "Error al iniciar sesion";
             return View("Index");
         }
-        return RedirectToAction("ObtenerCarpetas");
+        return RedirectToAction("HomePage");
     }
 
 //          HACER QUE SI ALGUNA COSA ES NULL NO LA ACTUALICE 
@@ -96,18 +96,20 @@ public class HomeController : Controller
         BD.CargarFoto(MyFile.FileName);
         return View("Perfil");
     }
+    /*input type file solo te deja subir archivos por lo que en vez de subir tambien carpetas te deberia dejar crear una carpeta donde puedas guardar las distintas cosas*/
     [HttpPost]
-    public IActionResult SubirArchivo( IFormFile MyFile){
-        /*input type file solo te deja subir archivos por lo que en vez de subir tambien carpetas te deberia dejar crear una carpeta donde puedas guardar las distintas cosas*/
-        /*Subir el nombre del archivo a la base de datos y en la clase(tiene que pasar el Usuario tambien el form)*/
+    public IActionResult SubirArchivo( int IdUsuario,IFormFile MyFile){
         if(MyFile.Length>0){
             string wwwRootLocal = this.Enviroment.ContentRootPath + @"\wwwroot\" + MyFile.FileName;
             using (var stream = System.IO.File.Create(wwwRootLocal))
             {
                 MyFile.CopyTo(stream);
             }
+            /*Tiene que pasar tambien la id de la carpeta dependendiendo de donde fue hecho el archivo*/
+            Documento NuevoDocumento = new Documento(IdUsuario,1,MyFile.FileName,MyFile.ContentType,DateTime.UtcNow.ToString("MM-dd-yyyy"));
+            BD.NuevoDocumento(NuevoDocumento);
         }
-        return View("Index");
+        return RedirectToAction("HomePage");
     } 
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
