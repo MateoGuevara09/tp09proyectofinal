@@ -55,11 +55,6 @@ public class HomeController : Controller
     }
 
 //          HACER QUE SI ALGUNA COSA ES NULL NO LA ACTUALICE 
-    public IActionResult ActualizarPerfil(Usuario user){
-        BD.CambiarPerfil(user);
-        BD.UsuarioLogueado = user;
-        return RedirectToAction("HomePage");
-    }
     public IActionResult CrearNuevaCuenta(Usuario user)
     {
 
@@ -82,9 +77,10 @@ public class HomeController : Controller
         return View("HomePage");
     }
 
-
     [HttpPost]
-    public IActionResult CargarFotoPerfil(Usuario user, IFormFile MyFile){
+    public IActionResult ActualizarPerfil(Usuario user, IFormFile MyFile){
+        BD.CambiarPerfil(user);
+        BD.UsuarioLogueado = user;
         if(MyFile.Length>0)
         {
             string wwwRootLocal = this.Enviroment.ContentRootPath + @"\wwwroot\" + MyFile.FileName;
@@ -95,8 +91,9 @@ public class HomeController : Controller
             user.Foto=MyFile.FileName;
         }
         BD.CargarFoto(MyFile.FileName);
-        return View("Perfil");
+        return RedirectToAction("HomePage");
     }
+
     /*input type file solo te deja subir archivos por lo que en vez de subir tambien carpetas te deberia dejar crear una carpeta donde puedas guardar las distintas cosas*/
     [HttpPost]
     public IActionResult SubirArchivo( int IdUsuario,IFormFile MyFile){
