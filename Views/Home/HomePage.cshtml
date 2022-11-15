@@ -33,13 +33,14 @@
     <input type="submit" value="Buscar">
   </p>
 </form>
-  <h4 style="text-decoration: underline;">⭐ Bienvenido @BD.UsuarioLogueado.Nombre ⭐</h4>
-  <a href='@Url.Action("Index","Home")' class="btn btn-secondary btn-lg btn-block active">Cerrar Sesión</a>
+<h4 class="text-center" style="text-decoration: underline;">⭐Bienvenido @BD.UsuarioLogueado.Nombre⭐</h4>
 </div>
-  <!-- Boton perfil -->
-  <a href='@Url.Action("Perfil","Home")' style="background-image: url(@BD.UsuarioLogueado.Foto);width:90px"></a>
-
-<!-- Boton cerrar sesión -->
-
+<div class="col-6">
+          <!-- Boton perfil SE ROMPIO :,v-->
+  <a href='@Url.Action("Perfil","Home")'><img class="perfil" src="@BD.UsuarioLogueado.Foto"></a>
+          <!-- Boton cerrar sesión -->
+  <a href='@Url.Action("Index","Home")' class="btn btn-secondary btn-lg btn-block active cerrarsesion" style="margin-left: 5%;">Cerrar Sesión</a>
+</div>
+  
 </div>
 

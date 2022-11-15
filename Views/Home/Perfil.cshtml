@@ -4,7 +4,8 @@
 
 <!-- Foto De Perfil -->
 <div class="container">
-      <div class="perfil" style="background-image: url(https://s1.eestatic.com/2020/05/18/como/gatos-mascotas-trucos_490961518_152142875_1706x960.jpg);width:60px; margin-left: 0%;"></div>
+      <a href='@Url.Action("HomePage","Home")'><img src="/flecha.png" style="width: 60px;"></a>
+      <div class="perfil" style="background-image: url(https://s1.eestatic.com/2020/05/18/como/gatos-mascotas-trucos_490961518_152142875_1706x960.jpg);width: 150px; height:150px;"></div>
   <div class="row">
     <div class="col-sm">
       <div class="nombre"> <h1>Nombre de usuario: @BD.UsuarioLogueado.Nombre</h1> </div> 
@@ -12,25 +13,26 @@
     </div>
     <div class="col-md">  
       <form style="width: 22rem;" action='@Url.Action("ActualizarPerfil","Home")' method="post" enctype="multipart/form-data">    
-          <!-- Cambiar nombre de usuario -->
-          <input type="hidden" name="IdUsuario" value="@BD.UsuarioLogueado.idUsuario">
-          <div class="form-outline mb-4">
-            <label class="form-label" for="form2Example1" style="margin-left: 0px;">Cambiar nombre de usuario</label>
-            <input type="text" id="form2Example1" class="form-control" name="nombre" value="@BD.UsuarioLogueado.Nombre">
-          <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 88.8px;"></div><div class="form-notch-trailing"></div></div></div>
+        <!-- Cambiar nombre de usuario -->
+        <input type="hidden" name="IdUsuario" value="@BD.UsuarioLogueado.idUsuario">
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form2Example1" style="margin-left: 0px;">Cambiar nombre de usuario</label>
+          <input type="text" id="form2Example1" class="form-control" name="nombre" value="@BD.UsuarioLogueado.Nombre">
+        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 88.8px;"></div><div class="form-notch-trailing"></div></div></div>
 
-          <!-- Cambiar mail -->
-          <div class="form-outline mb-4">
-            <label class="form-label" for="form2Example1" style="margin-left: 0px;">Cambiar mail</label>
-            <input type="email" id="form2Example1" class="form-control" name="mail" value="@BD.UsuarioLogueado.mail">
-          <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 88.8px;"></div><div class="form-notch-trailing"></div></div></div>
+        <!-- Cambiar mail -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form2Example1" style="margin-left: 0px;">Cambiar mail</label>
+          <input type="email" id="form2Example1" class="form-control" name="mail" value="@BD.UsuarioLogueado.mail">
+        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 88.8px;"></div><div class="form-notch-trailing"></div></div></div>
 
-          <!-- Cambiar contraseña -->
-          <div class="form-outline mb-4">
-            <label class="form-label" for="form2Example2" style="margin-left: 0px;">Cambiar contraseña</label>
-            <input type="password" id="form2Example2" class="form-control" name="Contraseña" value="@BD.UsuarioLogueado.Contraseña">
-          <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 64.8px;"></div><div class="form-notch-trailing"></div></div></div>
+        <!-- Cambiar contraseña -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form2Example2" style="margin-left: 0px;">Cambiar contraseña</label>
+          <input type="password" id="form2Example2" class="form-control" name="Contraseña" value="@BD.UsuarioLogueado.Contraseña">
+        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 64.8px;"></div><div class="form-notch-trailing"></div></div></div>
         
+        <!-- Subir foto -->
         <label class="form-label" for="form2Example2" style="margin-left: 0px;">Cambiar foto de perfil</label>
         <input style="margin-bottom: 5%;" type="file" name="MyFile">
         <br>

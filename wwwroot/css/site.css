@@ -30,16 +30,20 @@ body {
   margin-top: 10px;
 }
 .perfil{
-  height: 90px;
-  width: 90px;
+  height: 60px;
+  width: 60px;
   background-repeat: no-repeat;
   background-position: 50%;
-  border-radius: 50%;
+  border-radius: 150px;
   background-size: 100% 100%;
-  margin-left: 40%;
 }
 .container-fluid{
   padding: 0px;
+}
+
+.cerrarsesion{
+  font-size: smaller;
+  width:fit-content;
 }
 /*
 Scrolbar!!

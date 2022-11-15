@@ -8,7 +8,7 @@ namespace tp09proyectofinal.Models;
 public static class BD{
 
     //CAMBIAR LA COMPUTADORA PARA QUE FUNCIONE
-    private static string _conectionString = @"Server=A-PHZ2-CIDI-035;DataBase=TP09 REPOSITORY; Trusted_Connection=true;";
+    private static string _conectionString = @"Server=A-PHZ2-LUM-18;DataBase=TP09 REPOSITORY; Trusted_Connection=true;";
     public static Usuario UsuarioLogueado = null;
     
     private static Usuario UsuarioEnBD = new Usuario();
@@ -46,9 +46,9 @@ public static class BD{
 
 //Fijarse que onda
     public static void CambiarPerfil (Usuario user){
-        string sql = "UPDATE Usuario SET Nombre= @pNombre, mail=@pMail, Contraseña=@pContraseña, Foto=@pFoto WHERE idUsuario=@pidUsuario";
+        string sql = "UPDATE Usuario SET Nombre= @pNombre, mail=@pMail, Contraseña=@pContraseña WHERE idUsuario=@pidUsuario";
         using(SqlConnection db = new SqlConnection(_conectionString)){
-            db.Execute(sql,new {pNombre = user.Nombre, pMail = user.mail, pContraseña = user.Contraseña, pidUsuario = user.idUsuario, pFoto = user.Foto});
+            db.Execute(sql,new {pNombre = user.Nombre, pMail = user.mail, pContraseña = user.Contraseña, pidUsuario = user.idUsuario});
         }
     }
 
