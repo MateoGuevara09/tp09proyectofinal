@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Z:\2022\Programación\tp09proyectofinal\bin\Debug\net6.0\appsettings.Development.json
 Z:\2022\Programación\tp09proyectofinal\bin\Debug\net6.0\appsettings.json
 Z:\2022\Programación\tp09proyectofinal\bin\Debug\net6.0\tp09proyectofinal.staticwebassets.runtime.json
@@ -32,3 +33,39 @@ Z:\2022\Programación\tp09proyectofinal\obj\Debug\net6.0\refint\tp09proyectofina
 Z:\2022\Programación\tp09proyectofinal\obj\Debug\net6.0\tp09proyectofinal.pdb
 Z:\2022\Programación\tp09proyectofinal\obj\Debug\net6.0\tp09proyectofinal.genruntimeconfig.cache
 Z:\2022\Programación\tp09proyectofinal\obj\Debug\net6.0\ref\tp09proyectofinal.dll
+=======
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\bin\Debug\net6.0\appsettings.Development.json
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\bin\Debug\net6.0\appsettings.json
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\bin\Debug\net6.0\tp09proyectofinal.staticwebassets.runtime.json
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\bin\Debug\net6.0\tp09proyectofinal.exe
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\bin\Debug\net6.0\tp09proyectofinal.deps.json
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\bin\Debug\net6.0\tp09proyectofinal.runtimeconfig.json
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\bin\Debug\net6.0\tp09proyectofinal.dll
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\bin\Debug\net6.0\tp09proyectofinal.pdb
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\bin\Debug\net6.0\Dapper.dll
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\bin\Debug\net6.0\System.Data.SqlClient.dll
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\obj\Debug\net6.0\tp09proyectofinal.csproj.AssemblyReference.cache
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\obj\Debug\net6.0\tp09proyectofinal.GeneratedMSBuildEditorConfig.editorconfig
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\obj\Debug\net6.0\tp09proyectofinal.AssemblyInfoInputs.cache
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\obj\Debug\net6.0\tp09proyectofinal.AssemblyInfo.cs
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\obj\Debug\net6.0\tp09proyectofinal.csproj.CoreCompileInputs.cache
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\obj\Debug\net6.0\tp09proyectofinal.MvcApplicationPartsAssemblyInfo.cache
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\obj\Debug\net6.0\tp09proyectofinal.RazorAssemblyInfo.cache
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\obj\Debug\net6.0\tp09proyectofinal.RazorAssemblyInfo.cs
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\obj\Debug\net6.0\staticwebassets.build.json
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\obj\Debug\net6.0\staticwebassets.development.json
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\obj\Debug\net6.0\scopedcss\bundle\tp09proyectofinal.styles.css
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\obj\Debug\net6.0\scopedcss\projectbundle\tp09proyectofinal.bundle.scp.css
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\obj\Debug\net6.0\tp09proyectofinal.csproj.CopyComplete
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\obj\Debug\net6.0\tp09proyectofinal.dll
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\obj\Debug\net6.0\refint\tp09proyectofinal.dll
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\obj\Debug\net6.0\tp09proyectofinal.pdb
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\obj\Debug\net6.0\tp09proyectofinal.genruntimeconfig.cache
+Z:\Programacion proyecto final!!\github tp9\tp09proyectofinal\obj\Debug\net6.0\ref\tp09proyectofinal.dll
+>>>>>>> 7ba4fb11b28f1dc7a1a8fc993e5e13f7184eff47

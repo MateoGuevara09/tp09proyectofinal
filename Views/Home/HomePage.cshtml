@@ -1,7 +1,7 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-<!-- Lista carpetas con boton que te mande a su contenido -->
+<!-- Lista carpetas con boton que te mande a su contenido  AGREGAR BOTON PARA CREAR CARPETA-->
 <div class="col-2  divlistaarchivos">
     <form action='@Url.Action("SubirArchivo","Home", new{IdUsuario = @ViewBag.Usuario.idUsuario})' method="post" enctype="multipart/form-data">
       <label for="SubirArchivo" class="btn btn-secondary btn-lg btn-block active">Nuevo</label>
