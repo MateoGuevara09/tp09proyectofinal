@@ -45,7 +45,7 @@ public class HomeController : Controller
         {
             Usuario user = BD.ObtenerUsuario(mail, contraseña);
             BD.UsuarioLogueado = user;
-            BD.UsuarioLogueado.Foto="/perfil.png";
+            BD.UsuarioLogueado.Foto="perfil.png";
             return RedirectToAction("HomePage");  
         }else{
             ViewBag.Error = "Error al iniciar sesion";
@@ -79,18 +79,23 @@ public class HomeController : Controller
 
     [HttpPost]
     public IActionResult ActualizarPerfil(Usuario user, IFormFile MyFile){
-        BD.CambiarPerfil(user);
+        
         BD.UsuarioLogueado = user;
-        if(MyFile.Length>0)
-        {
-            string wwwRootLocal = this.Enviroment.ContentRootPath + @"\wwwroot\" + MyFile.FileName;
-            using (var stream = System.IO.File.Create(wwwRootLocal))
-            {
-                MyFile.CopyTo(stream);
-            }
-            user.Foto=MyFile.FileName;
+        if(MyFile==null){
+            BD.UsuarioLogueado.Foto="perfil.png";
         }
-        BD.CargarFoto(MyFile.FileName);
+        else{
+            if(MyFile.Length>0)
+            {
+                string wwwRootLocal = this.Enviroment.ContentRootPath + @"\wwwroot\" + MyFile.FileName;
+                using (var stream = System.IO.File.Create(wwwRootLocal))
+                {
+                    MyFile.CopyTo(stream);
+                }
+                user.Foto=MyFile.FileName;
+            }
+        }
+        BD.CambiarPerfil(user);
         return RedirectToAction("HomePage");
     }
 

@@ -1,10 +1,6 @@
 {
   "Version": 1,
-<<<<<<< HEAD
-  "Hash": "wjtpSpxjS6jU8mY4eUY0BCNZaP20pN03JRIcu5MP7zU=",
-=======
-  "Hash": "PunQ/q6vT5h6nvWDY42BeyWkSfxcQmOp1LVG6rRT4TE=",
->>>>>>> 5e2c39ca48eb77ca20089a2fd21d8aaa923703c5
+  "Hash": "0ex17qH1RyO3V7HjsoTeoA8+qkytMPWWc7pV+AlIDrA=",
   "Source": "tp09proyectofinal",
   "BasePath": "_content/tp09proyectofinal",
   "Mode": "Default",
@@ -55,28 +51,7 @@
       "OriginalItemSpec": "Z:\\2022\\Programación\\tp09proyectofinal\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\tp09proyectofinal.bundle.scp.css"
     },
     {
-<<<<<<< HEAD
       "Identity": "Z:\\2022\\Programación\\tp09proyectofinal\\wwwroot\\5DJB6CMISFDIHICSULLTV6T254.webp",
-=======
-      "Identity": "Z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\wwwroot\\5DJB6CMISFDIHICSULLTV6T254.webp",
-      "SourceId": "tp09proyectofinal",
-      "SourceType": "Discovered",
-      "ContentRoot": "Z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\wwwroot\\",
-      "BasePath": "_content/tp09proyectofinal",
-      "RelativePath": "5DJB6CMISFDIHICSULLTV6T254.webp",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\5DJB6CMISFDIHICSULLTV6T254.webp"
-    },
-    {
-      "Identity": "Z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\wwwroot\\css\\site.css",
->>>>>>> 5e2c39ca48eb77ca20089a2fd21d8aaa923703c5
       "SourceId": "tp09proyectofinal",
       "SourceType": "Discovered",
       "ContentRoot": "Z:\\2022\\Programación\\tp09proyectofinal\\wwwroot\\",
@@ -108,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "Z:\\2022\\Programación\\tp09proyectofinal\\wwwroot\\download.jpg",
+      "SourceId": "tp09proyectofinal",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\2022\\Programación\\tp09proyectofinal\\wwwroot\\",
+      "BasePath": "_content/tp09proyectofinal",
+      "RelativePath": "download.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\download.jpg"
     },
     {
       "Identity": "Z:\\2022\\Programación\\tp09proyectofinal\\wwwroot\\favicon.ico",
