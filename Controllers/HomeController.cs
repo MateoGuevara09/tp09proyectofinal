@@ -38,7 +38,7 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult IniciarSesion(string mail, string contraseña) //DEVOLVER ERROR SI ESTA MAL
+    public IActionResult IniciarSesion(string mail, string contraseña)
     {
         
         if (BD.IniciarSesion(mail, contraseña))
@@ -95,16 +95,18 @@ public class HomeController : Controller
     }
 
     /*input type file solo te deja subir archivos por lo que en vez de subir tambien carpetas te deberia dejar crear una carpeta donde puedas guardar las distintas cosas*/
+    /*la carpeta que deberia ser pasada tendria que ser una que sea la "carpetaactual" osea que si tocas una dentro de la lista entonces cambiaria la carpeta actual y si no tocas ninguna entonces deberia volver a la principal AYUDAAAAAAAAAAAAAAAA*/
     [HttpPost]
     public IActionResult SubirArchivo( int IdUsuario,IFormFile MyFile){
         if(MyFile.Length>0){
+            /*cambiar donde se guarda el archivo dependiendo de donde se sube en las carpetas y la carpeta principal de cada usuario*/
             string wwwRootLocal = this.Enviroment.ContentRootPath + @"\wwwroot\" + MyFile.FileName;
             using (var stream = System.IO.File.Create(wwwRootLocal))
             {
                 MyFile.CopyTo(stream);
             }
-            /*Tiene que pasar tambien la id de la carpeta dependendiendo de donde fue hecho el archivo*/
-            Documento NuevoDocumento = new Documento(IdUsuario,1,MyFile.FileName,MyFile.ContentType,DateTime.UtcNow.ToString("MM-dd-yyyy"));
+            /*Tiene que pasar tambien la id de la carpeta dependendiendo de donde fue hecho el archivo con la "carpetaactual"*/
+            Documento NuevoDocumento = new Documento(IdUsuario,3,MyFile.FileName,MyFile.ContentType,DateTime.UtcNow.ToString("MM-dd-yyyy"));
             BD.NuevoDocumento(NuevoDocumento);
         }
         return RedirectToAction("HomePage");
