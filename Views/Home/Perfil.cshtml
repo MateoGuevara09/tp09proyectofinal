@@ -3,15 +3,15 @@
 }
 
 <!-- Foto De Perfil -->
+<a href='@Url.Action("HomePage","Home")'><img src="/flecha.png" style="width: 60px;"></a>
 <div class="container">
-      <a href='@Url.Action("HomePage","Home")'><img src="/flecha.png" style="width: 60px;"></a>
-      <div class="perfil" style="background-image: url(https://s1.eestatic.com/2020/05/18/como/gatos-mascotas-trucos_490961518_152142875_1706x960.jpg);width: 150px; height:150px;"></div>
+      <div class="perfil" style="width: 150px; height: 150px;"><img class="perfil" src="/@BD.UsuarioLogueado.Foto" style="width: 150px; height: 150px;"></div>
   <div class="row">
     <div class="col-sm">
       <div class="nombre"> <h1>Nombre de usuario: @BD.UsuarioLogueado.Nombre</h1> </div> 
       <div class="mail"> <h4>Correo Electrónico: @BD.UsuarioLogueado.mail</h4></div>
     </div>
-    <div class="col-md">  
+    <div class="col-md card" style="padding: 12px;">  
       <form style="width: 22rem;" action='@Url.Action("ActualizarPerfil","Home")' method="post" enctype="multipart/form-data">    
         <!-- Cambiar nombre de usuario -->
         <input type="hidden" name="IdUsuario" value="@BD.UsuarioLogueado.idUsuario">

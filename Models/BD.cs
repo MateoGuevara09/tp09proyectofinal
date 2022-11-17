@@ -8,7 +8,7 @@ namespace tp09proyectofinal.Models;
 public static class BD{
 
     //CAMBIAR LA COMPUTADORA PARA QUE FUNCIONE
-    private static string _conectionString = @"Server=A-PHZ2-CIDI-040;DataBase=TP09 REPOSITORY; Trusted_Connection=true;";
+    private static string _conectionString = @"Server=A-PHZ2-CIDI-039;DataBase=TP09 REPOSITORY; Trusted_Connection=true;";
     public static Usuario UsuarioLogueado = null;
     
     private static Usuario UsuarioEnBD = new Usuario();
@@ -22,7 +22,7 @@ public static class BD{
             return false;
         }else{
             return true;
-        } //Si UsuarioEnBD esta null tiene que volver a pedir que inicie sesión, si no, está bien.
+        }
     }
     public static Usuario ObtenerUsuario(string mail,string Contraseña){
         using(SqlConnection db = new SqlConnection(_conectionString)){

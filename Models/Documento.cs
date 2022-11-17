@@ -1,9 +1,9 @@
 namespace tp09proyectofinal.Models;
 
 public class Documento{
-    private int _idDoc;private string _NombreDoc;private int _idUsuario;private int _idCarpeta; private string _TipoDoc; private string _TiempoSubida;
+    private int _idDoc;private string _NombreDoc;private int _idUsuario;private int _idCarpeta; private string _TipoDoc; private DateTime _TiempoSubida;
     public Documento(){}
-    public Documento(int pidUsuario, int pidCarpeta,string pNombreDoc,string pTipoDoc, string pTiempoSubida){
+    public Documento(int pidUsuario, int pidCarpeta,string pNombreDoc,string pTipoDoc, DateTime pTiempoSubida){
           _idUsuario=pidUsuario; _idCarpeta=pidCarpeta;_NombreDoc=pNombreDoc; _TipoDoc = pTipoDoc; _TiempoSubida = pTiempoSubida;
     }
 
@@ -27,7 +27,7 @@ public class Documento{
         get{return _TipoDoc;}
         set{_TipoDoc = value;}
     }
-    public string TiempoSubida{
+    public DateTime TiempoSubida{
         get{return _TiempoSubida;}
         set{_TiempoSubida = value;}
     }
