@@ -4,6 +4,12 @@ using tp09proyectofinal.Models;
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
+/*
+AJAX LISTA:
+- MOSTRAR ARCHIVO
+- MOSTRAR ARCHIVO SUBIDO
+*/
+
 namespace tp09proyectofinal.Controllers;
 
 public class HomeController : Controller
@@ -54,7 +60,6 @@ public class HomeController : Controller
         return RedirectToAction("HomePage");
     }
 
-//          HACER QUE SI ALGUNA COSA ES NULL NO LA ACTUALICE 
     public IActionResult CrearNuevaCuenta(Usuario user)
     {
 
@@ -96,7 +101,7 @@ public class HomeController : Controller
             }
         }
         BD.CambiarPerfil(user);
-        return RedirectToAction("HomePage");
+        return View("Perfil");
     }
 
     /*input type file solo te deja subir archivos por lo que en vez de subir tambien carpetas te deberia dejar crear una carpeta donde puedas guardar las distintas cosas*/
@@ -111,7 +116,7 @@ public class HomeController : Controller
                 MyFile.CopyTo(stream);
             }
             /*Tiene que pasar tambien la id de la carpeta dependendiendo de donde fue hecho el archivo con la "carpetaactual"*/
-            Documento NuevoDocumento = new Documento(IdUsuario,3,MyFile.FileName,MyFile.ContentType,DateTime.UtcNow.ToString("MM-dd-yyyy"));
+            Documento NuevoDocumento = new Documento(IdUsuario,3,MyFile.FileName,MyFile.ContentType,DateTime.Now);
             BD.NuevoDocumento(NuevoDocumento);
         }
         return RedirectToAction("HomePage");
