@@ -8,12 +8,13 @@
       <input id="SubirArchivo" type="file" name="MyFile" style="visibility:hidden;" onchange="javascript:this.form.submit();">
     </form> 
     <div class="">
+      <!--Tienen que ser botones lo que se crea dentro del foreach-->
       @{
-          if(ViewBag.ListaCarpetas.Count != 0)
+          if(ViewBag.ListaDocumentos.Count != 0)
           {
-            foreach(Carpeta archivo in ViewBag.ListaCarpetas){
+            foreach(Documento archivo in ViewBag.ListaDocumentos){
               <ul>
-              <li class="list-group-item disabled"><p id="NombreArchivo"></p></li>
+              <li class="list-group-item disabled">@archivo.NombreDoc</li>
               </ul>
             }
           }else{

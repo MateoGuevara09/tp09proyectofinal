@@ -38,6 +38,7 @@ public static class BD{
             db.Execute(sql,new {pNombre = user.Nombre, pMail = user.mail, pContraseña = user.Contraseña});
         }
     }
+    /*Arreglar nombre de carpeta*/
     public static void CrearCarpetaPrincipal (Usuario user){
         string sql = "INSERT INTO Carpeta (IdUsuario,NombreCarpeta) VALUES (@pIdusuario,@pNombreCarpeta)";
         using(SqlConnection db = new SqlConnection(_conectionString)){
@@ -73,19 +74,13 @@ public static class BD{
         }
         return listaDocumento;
     }
-    public static void NuevaCarpeta (Carpeta carp){
-        string sql = "INSERT INTO Documento (pidUsuario, pNombreCarpeta) VALUES (@pidUsuario,@pNombreCarpeta)";
-        using(SqlConnection db = new SqlConnection(_conectionString)){
-            db.Execute(sql,new {pidUsuario = carp.IdUsuario, pNombreCarpeta = carp.NombreCarpeta});
-        }
-    }
-    public static List<Carpeta> ObtenerCarpetas(){
-        List<Carpeta> listaCarpeta = null;
-        string sql = "SELECT * FROM Carpeta";
+    public static Carpeta ObtenerCarpeta(Usuario user){
+        string sql = "SELECT * FROM Carpeta WHERE IdUsuario = @pIdUsuario";
+        Carpeta CarpetaActual;
         using(SqlConnection db = new SqlConnection(_conectionString))
         {
-            listaCarpeta = db.Query<Carpeta>(sql).ToList();
+             CarpetaActual = db.QueryFirstOrDefault<Carpeta>(sql, new{pIdUsuario = user.idUsuario});
         }
-        return listaCarpeta;
+        return CarpetaActual;
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uSB63EiizSWt/QUjWRMkYMOSQGr4gHMHaW0S5risUaY=",
+  "Hash": "Dt4KEMUl3SB8qIsLWlCCQKc6yGHd2ojJ1nAqObAh+BY=",
   "Source": "tp09proyectofinal",
   "BasePath": "_content/tp09proyectofinal",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "Z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\wwwroot\\frutilla.psd",
+      "SourceId": "tp09proyectofinal",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\wwwroot\\",
+      "BasePath": "_content/tp09proyectofinal",
+      "RelativePath": "frutilla.psd",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\frutilla.psd"
     },
     {
       "Identity": "Z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\wwwroot\\js\\site.js",
