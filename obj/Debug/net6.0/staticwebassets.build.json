@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UojwEOI27KkFxlDMyBA60FncMHdRcU3eGtFucf3vqvo=",
+  "Hash": "68GtbSOfLcpyetAWNt8JpZtiivehHu0Kzk/Cxu68GrI=",
   "Source": "tp09proyectofinal",
   "BasePath": "_content/tp09proyectofinal",
   "Mode": "Default",
@@ -66,23 +66,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\CarpetaPrincipalpepe\\frutilla.psd"
-    },
-    {
-      "Identity": "Z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\wwwroot\\CarpetaPrincipalpepe\\storyboard efsi.png",
-      "SourceId": "tp09proyectofinal",
-      "SourceType": "Discovered",
-      "ContentRoot": "Z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\wwwroot\\",
-      "BasePath": "_content/tp09proyectofinal",
-      "RelativePath": "CarpetaPrincipalpepe/storyboard efsi.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\CarpetaPrincipalpepe\\storyboard efsi.png"
     },
     {
       "Identity": "Z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\wwwroot\\css\\site.css",
