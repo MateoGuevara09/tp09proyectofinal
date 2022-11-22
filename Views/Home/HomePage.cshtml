@@ -1,41 +1,43 @@
 @{
     ViewData["Title"] = "Home Page";
 }
+<!--ListaArchivos-->
+<div style="margin-top: 20px ;">
 <div class="col-2  divlistaarchivos">
     <form action='@Url.Action("SubirArchivo","Home", new{IdUsuario = @ViewBag.Usuario.idUsuario})' method="post" enctype="multipart/form-data">
       <label for="SubirArchivo" class="btn btn-secondary btn-lg btn-block active">Nuevo</label>
       <input id="SubirArchivo" type="file" name="MyFile" style="visibility:hidden;" onchange="javascript:this.form.submit();">
     </form> 
     <div class="">
-      <!--Tienen que ser botones lo que se crea dentro del foreach-->
+      
       @{
           if(ViewBag.ListaDocumentos.Count != 0)
           {
-            foreach(Documento archivo in ViewBag.ListaDocumentos){
-              <ul>
-              <li class="list-group-item disabled">@archivo.NombreDoc</li>
-              </ul>
+            <ul>
+            @foreach(Documento archivo in ViewBag.ListaDocumentos){
+                <li class="list-group-item disabled">
+                  @archivo.NombreDoc 
+                </li>
+                <input type="button" class="btn btn-secondary" onclick="MostrarInfoArchivo(@archivo.IdDoc,'@ViewBag.Usuario.Nombre')" value="mas info">       
+                <a href='@Url.Action("EliminarDocumento", "Home", new {IdDocBorrar = archivo.IdDoc})'>Eliminar</a>       
             }
+            </ul>
           } 
       }
-      </div>
-  </div>
-
-
-  <!-- Buscar x Nombre -->
-  <div class="navbarr row col-9">
-    <div class="col-6"style="float: left;">
-      <form action="." method="post" target="_blank">
-      <p>
-        Buscar documento: <input type="search" name="busquedaDoc" placeholder="Buscar...">
-        <input type="submit" value="Buscar">
-      </p>
-      </form>
-      <h4 class="text-center" style="text-decoration: underline;">⭐Bienvenido @BD.UsuarioLogueado.Nombre⭐</h4>
     </div>
+</div>
+<!-- Buscar x Nombre -->
+<div class="navbarr row col-10" style="margin-left: 80% ;">
     <div class="col-6">
       <a href='@Url.Action("Perfil","Home")'><img class="perfil" src="/@BD.UsuarioLogueado.Foto"></a>
-      <a href='@Url.Action("Index","Home")' class="btn btn-secondary btn-lg btn-block active cerrarsesion" style="margin-left: 5%;">Cerrar Sesión</a>
+      <a href='@Url.Action("Index","Home")' class="btn btn-secondary btn-sm btn-block active cerrarsesion" style="margin-left: 5%;">Cerrar Sesión</a>
     </div>
-  </div>
+</div>
+<!--Info archivo-->
+<div class="row col-10">
+ <h3 id="NombreArchivo">No seleccionaste ningun archivo todavia</h3>
+ <h4 id="NombreUsuario"></h4>
+ <h4 id="TipoDocumento"></h4>
+ <h4 id="TiempoSubida"></h4>
+</div>
 </div>

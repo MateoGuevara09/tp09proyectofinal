@@ -1,4 +1,14 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your JavaScript code.
+﻿function MostrarInfoArchivo(IdDoc,nombre){
+    $.ajax({
+        url: '/Home/MostrarInfoArchivoAjax',
+        data:{IdDocumento:IdDoc},
+        type: 'POST',
+        dataType: 'json',
+        success : function(response){
+            $("#NombreArchivo").html("Nombre documento:" + response.nombreDoc);
+            $("#NombreUsuario").html("Archivo de: " + nombre);
+            $("#TipoDocumento").html("Tipo de archivo: " + response.tipoDoc);
+            $("#TiempoSubida").html("Cuando fue subido: " + response.tiempoSubida);
+        }
+    });
+}

@@ -52,6 +52,9 @@ public class HomeController : Controller
             Usuario user = BD.ObtenerUsuario(mail, contraseña);
             BD.UsuarioLogueado = user;
             BD.UsuarioLogueado.Foto="perfil.png";
+            if(BD.ObtenerCarpeta(user) == null){
+                BD.CrearCarpetaPrincipal(user);
+            }
             return RedirectToAction("HomePage");  
         }else{
             ViewBag.Error = "Error al iniciar sesion";
@@ -88,7 +91,6 @@ public class HomeController : Controller
         return View("HomePage");
     }
 
-    [HttpPost]
     public IActionResult ActualizarPerfil(Usuario user, IFormFile MyFile){
         
         BD.UsuarioLogueado = user;
@@ -109,8 +111,6 @@ public class HomeController : Controller
         BD.CambiarPerfil(user);
         return View("Perfil");
     }
-
-    [HttpPost]
     public IActionResult SubirArchivo( int IdUsuario,IFormFile MyFile){
         Carpeta CarpetaPrincipalActual = BD.ObtenerCarpeta(BD.UsuarioLogueado);
         if(MyFile.Length>0){
@@ -124,7 +124,18 @@ public class HomeController : Controller
         }
         return RedirectToAction("HomePage");
     } 
+    public IActionResult EliminarDocumento(int IdDocBorrar){
+        Carpeta CarpetaPrincipalActual = BD.ObtenerCarpeta(BD.UsuarioLogueado);
+        Documento documentoBorrar = BD.ObtenerDocumento(IdDocBorrar);
+        BD.EliminarDocumento(IdDocBorrar);
+        string wwwRootLocal = this.Enviroment.ContentRootPath + @"\wwwroot\" +CarpetaPrincipalActual.NombreCarpeta + @"\" + documentoBorrar.NombreDoc;
+        System.IO.File.Delete(wwwRootLocal);
+        return RedirectToAction("HomePage");
+    }
 
+    public Documento MostrarInfoArchivoAjax(int IdDocumento){
+        return BD.ObtenerDocumento(IdDocumento);
+    }
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

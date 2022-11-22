@@ -8,7 +8,7 @@ namespace tp09proyectofinal.Models;
 public static class BD{
 
     //CAMBIAR LA COMPUTADORA PARA QUE FUNCIONE
-    private static string _conectionString = @"Server=A-PHZ2-CIDI-039;DataBase=TP09 REPOSITORY; Trusted_Connection=true;";
+    private static string _conectionString = @"Server=A-PHZ2-CIDI-012;DataBase=TP09 REPOSITORY; Trusted_Connection=true;";
     public static Usuario UsuarioLogueado = null;
     
     private static Usuario UsuarioEnBD = new Usuario();
@@ -41,8 +41,9 @@ public static class BD{
     /*Arreglar nombre de carpeta*/
     public static void CrearCarpetaPrincipal (Usuario user){
         string sql = "INSERT INTO Carpeta (IdUsuario,NombreCarpeta) VALUES (@pIdusuario,@pNombreCarpeta)";
+        string nombre = "CarpetaPrincipal" + user.Nombre;
         using(SqlConnection db = new SqlConnection(_conectionString)){
-            db.Execute(sql,new {pIdusuario = user.idUsuario, pNombreCarpeta = "CarpetaPrincipal" + user.Nombre});
+            db.Execute(sql,new {pIdusuario = user.idUsuario, pNombreCarpeta = nombre});
         }
     }
     public static void CargarFoto (string foto){
@@ -74,6 +75,15 @@ public static class BD{
         }
         return listaDocumento;
     }
+    public static Documento ObtenerDocumento(int IdDocumento){
+        string sql = "SELECT * FROM Documento WHERE idDoc=@pidDocumento";
+        Documento ArchivoActual;
+        using(SqlConnection db = new SqlConnection(_conectionString))
+        {
+            ArchivoActual = db.QueryFirstOrDefault<Documento>(sql,new{pidDocumento = IdDocumento});
+        }
+        return ArchivoActual;
+    }
     public static Carpeta ObtenerCarpeta(Usuario user){
         string sql = "SELECT * FROM Carpeta WHERE IdUsuario = @pIdUsuario";
         Carpeta CarpetaActual;
@@ -82,5 +92,13 @@ public static class BD{
              CarpetaActual = db.QueryFirstOrDefault<Carpeta>(sql, new{pIdUsuario = user.idUsuario});
         }
         return CarpetaActual;
+    }
+    public static void EliminarDocumento(int IdDocumento)
+    {
+        string sql = "DELETE FROM Documento WHERE idDoc=@pidDocumento";
+        using(SqlConnection db = new SqlConnection(_conectionString))
+        {
+            db.Execute(sql, new{pidDocumento = IdDocumento});
+        }
     }
 }
