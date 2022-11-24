@@ -8,7 +8,7 @@ namespace tp09proyectofinal.Models;
 public static class BD{
 
     //CAMBIAR LA COMPUTADORA PARA QUE FUNCIONE
-    private static string _conectionString = @"Server=A-PHZ2-CIDI-012;DataBase=TP09 REPOSITORY; Trusted_Connection=true;";
+    private static string _conectionString = @"Server=ALANGODPC\SQLEXPRESS;DataBase=TP09 REPOSITORY; Trusted_Connection=true;";
     public static Usuario UsuarioLogueado = null;
     
     private static Usuario UsuarioEnBD = new Usuario();
