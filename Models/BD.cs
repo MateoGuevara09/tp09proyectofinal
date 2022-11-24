@@ -8,11 +8,10 @@ namespace tp09proyectofinal.Models;
 public static class BD{
 
     //CAMBIAR LA COMPUTADORA PARA QUE FUNCIONE
-    private static string _conectionString = @"Server=A-PHZ2-CIDI-012;DataBase=TP09 REPOSITORY; Trusted_Connection=true;";
+    private static string _conectionString = @"Server=A-PHZ2-CIDI-044;DataBase=TP09 REPOSITORY; Trusted_Connection=true;";
     public static Usuario UsuarioLogueado = null;
     
     private static Usuario UsuarioEnBD = new Usuario();
-    //cuando inciassecion deberia buscar la carpeta principal del usuario
     public static bool IniciarSesion(string mail,string Contraseña){
         using(SqlConnection db = new SqlConnection(_conectionString)){
             string sql ="SELECT * FROM Usuario WHERE mail = @pmail AND Contraseña = @pContraseña";
