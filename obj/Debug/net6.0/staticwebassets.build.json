@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "68GtbSOfLcpyetAWNt8JpZtiivehHu0Kzk/Cxu68GrI=",
+  "Hash": "G+bs3nFrKUgBdwRZJgOViqRVYL2rLdgNm2Uu1DbPivo=",
   "Source": "tp09proyectofinal",
   "BasePath": "_content/tp09proyectofinal",
   "Mode": "Default",
@@ -49,23 +49,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "Z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\tp09proyectofinal.bundle.scp.css"
-    },
-    {
-      "Identity": "Z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\wwwroot\\CarpetaPrincipalpepe\\frutilla.psd",
-      "SourceId": "tp09proyectofinal",
-      "SourceType": "Discovered",
-      "ContentRoot": "Z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\wwwroot\\",
-      "BasePath": "_content/tp09proyectofinal",
-      "RelativePath": "CarpetaPrincipalpepe/frutilla.psd",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\CarpetaPrincipalpepe\\frutilla.psd"
     },
     {
       "Identity": "Z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\wwwroot\\css\\site.css",
@@ -1120,6 +1103,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\perfil.png"
+    },
+    {
+      "Identity": "Z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\wwwroot\\space.jpg",
+      "SourceId": "tp09proyectofinal",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\wwwroot\\",
+      "BasePath": "_content/tp09proyectofinal",
+      "RelativePath": "space.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\space.jpg"
     },
     {
       "Identity": "Z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\wwwroot\\Thumbs.db",

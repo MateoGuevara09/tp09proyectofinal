@@ -27,11 +27,6 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
-
     public IActionResult CrearCuenta()
     {
         ViewBag.Error = null;
@@ -69,7 +64,7 @@ public class HomeController : Controller
         if(user.Contraseña==user.Contraseña2)
         {
             BD.CrearNuevoUsuario(user);
-            BD.CrearCarpetaPrincipal(user);
+            BD.CrearCarpetaPrincipal(BD.ObtenerUsuario(user.mail,user.Contraseña));
             return View("Index");
         }
         else

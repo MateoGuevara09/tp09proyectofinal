@@ -11,15 +11,16 @@ html {
 html {
   position: relative;
   min-height: 100%;
-
 }
 
 body {
   margin-bottom: 60px;
+  background-image: url(https://i.pinimg.com/originals/e1/d6/ed/e1d6ed9eadedf4fab232e20b6a9ecb57.jpg);
 }
 .divsesion{
   background-color: #d9d9d9;
-  margin-top: 50%;
+  margin-top: 40%;
+  border-radius: 30px 30px 30px 30px;
 }
 .divlistaarchivos{
   float: left;
@@ -45,18 +46,4 @@ body {
   font-size: smaller;
   width:fit-content;
 }
-/*
-Scrolbar!!
-*::-webkit-scrollbar {
-  width: 16px;
-}
 
-*::-webkit-scrollbar-track {
-  background: #ffffff;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: #0a0a0a;
-  border-radius: 10px;
-  border: 3px solid #ffffff;
-}*/

@@ -16338,11 +16338,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "z:\\Programacion proyecto final!!\\github tp9\\tp09proyectofinal\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
